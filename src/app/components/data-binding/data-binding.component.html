@@ -1,1 +1,97 @@
 <p>data-binding works!</p>
+<div class="row">
+    <div class="col-3">
+        <h2>One Way data binding</h2>
+        <div class="card p-3">
+            1.interpolation
+            <hr>
+            <p>First name : {{firstName}}</p>
+            <p>Roll No : {{rollNo}}</p>
+
+        </div>
+        <div class="card p-3">
+            2.property binding
+            <hr>
+            <input class="form-control"class="form-control" type="text" [value]="firstName" name="" id="">
+            <input class="form-control" type="text" [placeholder]="customPlaceholder" name="" id="">
+            <button [class]="btnClassTheme" (click)="saveHandler()">save</button>
+        </div>
+        <div class="card p-3">
+            3.event binding
+            <hr>
+            <button [class]="btnClassTheme" (click)="saveHandler()">save</button>
+            <select (change)="changeProgramming()" class="form-control">
+                <option value="Java">Java</option>
+                <option value="Node">Node</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-3">
+        <h2>Two Way data binding</h2>
+        <div class="card p-3">
+            1.ngModel directive
+            <hr>
+            <input class="form-control" type="text" [(ngModel)]="firstName" name="" id="">
+            <select  [(ngModel)]="selectedValue" class="form-control">
+                <option value="Java">Java</option>
+                <option value="Node">Node</option>
+                <option value="Python">Python</option>
+            </select>
+            <p>{{selectedValue}}</p>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <h3>ngIf Directives</h3>
+        <hr>
+        <div class=" ">
+           <div class="card card-bg-info"  *ngIf="isHide">
+            toggle div1
+           </div>
+            
+            <button class="btn btn-danger" (click)="toggleDiv()">toggle</button>
+            <button class="btn btn-danger" (click)="hideDiv()">hide</button>
+            <button class="btn btn-success">show</button>
+        </div>
+        <div class="card">
+            <div class="card card-bg-info p-4"  *ngIf="num1==num2">
+             Div 2
+               </div>
+               <input type="text" [(ngModel)]="num1">
+               <input type="text" [(ngModel)]="num2">
+               {{num1 == num2}}
+        </div>
+        <h3>ngFor Directives</h3>
+        <hr>
+        <div class="card p-3">
+            <ul>
+                <li *ngFor="let city of cityList">
+                    {{city}}
+                </li>
+            </ul>
+<hr>
+            <select >
+                <option *ngFor="let user of userList"  [value]="user.userId">
+
+                    {{user.name}}
+                </option>
+            </select>
+            <hr>
+            <table class="table table-bordered">
+                <tr>
+                    <th>sl</th>
+                    <th>name</th>
+                    <th>city</th>
+                    <th>phone</th>
+                </tr>
+                <tr *ngFor="let user of userList;let sl = index" >
+                    <td>{{sl + 1}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.city}}</td>
+                    <td>{{user.phone}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
