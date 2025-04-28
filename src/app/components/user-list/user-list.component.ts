@@ -8,5 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent {
+  constructor(private router: Router){
+
+  }
+
+  navigateLink(){
+this.router.navigateByUrl("/admin")
+  }
 
 }

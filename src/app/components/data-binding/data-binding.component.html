@@ -95,3 +95,34 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    <h2>Attribute Directives - [ngClass] | [ngStyle]</h2><hr>
+    <div class="col-2">
+        <div class="btn" [ngClass]="bgColor">Save</div> <br>
+        <div class="btn btn-info" (click)="addBtnColor('bg-danger')">Add Red</div>
+        <div class="btn btn-info" (click)="addBtnColor('bg-success')">Add green</div>
+    </div>
+    <div class="col-3">
+        <div class="card mt-3">
+            <h2 [ngClass] = "isChecked == true ? 'text-success' :''">text visible</h2> 
+            <input type="checkbox" [(ngModel)] = "isChecked">
+            {{isChecked}}
+         </div>
+
+    </div>
+    <div class="col-2">
+        <div [ngClass]="div3Classname">
+            div-3
+        </div>
+        <input type="text" [(ngModel)]="div3Classname">
+    </div>
+    <div class="col-2">
+        <div class="" [ngStyle]="{'background-color':divBgColor}">Div1</div> <br>
+        <div class="" [ngStyle]="{'background-color':divBgColor}">Div2</div> <br>
+
+        <div class="btn btn-info" (click)="addDivColor('red')">Add Red</div>
+        <div class="btn btn-info" (click)="addDivColor('green')">Add green</div>
+        <input type="text" [(ngModel)]="divBgColor">
+    </div>
+</div>

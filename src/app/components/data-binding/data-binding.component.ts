@@ -53,4 +53,19 @@ this.isHide = !this.isHide
     {userId:245, name:'ritu', city:'khulna',phone:'083776'},
     {userId:977, name:'mitu', city:'rangpur',phone:'083776'},
   ]
+
+
+  //Attribute Directives
+
+  bgColor:string = 'bg-success';
+  isChecked:boolean=false;
+  div3Classname:string=''
+
+  addBtnColor(className:string){
+this.bgColor = className
+  }
+  divBgColor:string=''
+addDivColor(color:string){
+    this.divBgColor = color
+      }
 }

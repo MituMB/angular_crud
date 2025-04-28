@@ -1,0 +1,114 @@
+<div class="card w-50 mx-auto">
+    <form #supplierForm="ngForm">
+
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Supplier Name (English)<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="supplierNameEng" [(ngModel)]="supplierObj.supplierNameEng" >
+                    <!-- <select class="select form-control">
+                        <option>Select</option>
+                        <option>200 slot chicks</option>
+                        <option>ABC Chickens</option>
+        
+                    </select> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Supplier Name (Bangla)<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="supplierNameBang" [(ngModel)]="supplierObj.supplierNameBang">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Address (English)<span class="text-danger ms-1">*</span></label>
+                     <textarea [(ngModel)]="supplierObj.addressEnglish" class="form-control" name="addressEnglish" id=""  rows="2"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Address (Bangla)<span class="text-danger ms-1">*</span></label>
+                    <textarea [(ngModel)]="supplierObj.addressBangla" class="form-control" name="addressBangla" id=""  rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Contact Person-1 (Name)<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="contactPerson1Name" [(ngModel)]="supplierObj.contactPerson1Name">
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Contact Person-1 (Number)<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="contactPerson1Num" [(ngModel)]="supplierObj.contactPerson1Num">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Contact Person-2 (Name)<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control"  name="contactPerson2Name" [(ngModel)]="supplierObj.contactPerson2Name">
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Contact Person-2 (Number)<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control"  name="contactPerson2Num" [(ngModel)]="supplierObj.contactPerson2Num">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Website Address<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control"  name="websiteAddress" [(ngModel)]="supplierObj.websiteAddress">
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Email Address<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control"  name="emailAddress" [(ngModel)]="supplierObj.emailAddress">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Telephone<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="telephone" [(ngModel)]="supplierObj.telephone">
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Trade Licence No<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="tradeLicenseNo" [(ngModel)]="supplierObj.tradeLicenseNo">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">BIN No<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="binNo"  [(ngModel)]="supplierObj.binNo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">TIN No<span class="text-danger ms-1">*</span></label>
+                    <input type="text" class="form-control" name="tinNo" [(ngModel)]="supplierObj.tinNo">
+                </div>
+            </div>
+        </div>
+        <button type="button" (click)="logSupplier()">Log Supplier Object</button>
+
+    </form>
+    <div>{{supplierObj.supplierNameEng}}</div>
+    <div>{{supplierObj.contactPerson1Num}}</div>
+    <div>{{supplierObj.tinNo}}</div>
+</div>

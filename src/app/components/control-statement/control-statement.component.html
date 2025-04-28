@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-3">
+
+        @if(isVisible == true){
+    
+            <div class="col-3 bg-success" >
+                div1
+            </div>
+        } 
+        <!-- @else{ -->
+    
+            <div class="col-3 bg-red">
+                div2
+            </div>
+        <!-- } -->
+        <button (click)="visibleHandler(true)">Show</button>
+        <button (click)="visibleHandler(false)">Hide</button>
+    </div>
+</div>
