@@ -1,11 +1,16 @@
-<div class="card w-50 mx-auto">
+<div class="card w-50 mx-auto p-3">
     <form #supplierForm="ngForm">
 
         <div class="row">
             <div class="col-sm-6 col-12">
                 <div class="mb-3">
                     <label class="form-label">Supplier Name (English)<span class="text-danger ms-1">*</span></label>
-                    <input type="text" class="form-control" name="supplierNameEng" [(ngModel)]="supplierObj.supplierNameEng" >
+                    <input type="text" class="form-control" #sname="ngModel" required name="supplierNameEng" [(ngModel)]="supplierObj.supplierNameEng" >
+                    <p class="text-danger text-sm">
+                        @if(sname.errors?.['required'] && sname.touched && sname.dirty){
+                            This is required
+                        }
+                    </p>
                     <!-- <select class="select form-control">
                         <option>Select</option>
                         <option>200 slot chicks</option>
@@ -105,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" (click)="logSupplier()">Log Supplier Object</button>
+        <button class="btn btn-primary" [disabled]="supplierForm.invalid" type="button" (click)="onSaveSupplier()">Log Supplier Object</button>
 
     </form>
     <div>{{supplierObj.supplierNameEng}}</div>

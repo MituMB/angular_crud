@@ -8,12 +8,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent {
-  constructor(private router: Router){
 
-  }
+  userList:any[]= []
+  
+  constructor(
+    private router: Router,
+    private userService: UserService,
+  ){}
 
   navigateLink(){
-this.router.navigateByUrl("/admin")
+    this.router.navigateByUrl("/admin")
   }
+
+  ngOnInit(): void {
+    this.fetchUsers();
+  }
+  fetchUsers(){
+
+    this.userService.getUsers().subscribe((result:any) => {
+      this.userList = result ;
+    });
+  }
+
+//   getUsers() {
+//     this.http.get(this.baseUrl).subscribe((result:any) => {
+//      this.userList = result ;
+//    });
+//  }
 
 }

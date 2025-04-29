@@ -6,6 +6,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ControlStatementComponent } from './components/control-statement/control-statement.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { GetApiComponent } from './components/API/get-api/get-api.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'user', component: UserListComponent},
     { path: 'template-form', component: TemplateFormComponent},
     { path: 'reactive-form', component: ReactiveFormComponent},
+    { path: 'getApi', component: GetApiComponent},
     { path: 'edit/:id', component: UserFormComponent },
   ];

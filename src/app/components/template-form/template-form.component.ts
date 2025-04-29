@@ -28,9 +28,12 @@ export class TemplateFormComponent {
       status: ''
     }
 
-    logSupplier() {
-      console.log(this.supplierObj);
-      console.table(this.supplierObj);
+    onSaveSupplier() {
+      // console.log(this.supplierObj);
+      // console.table(this.supplierObj);
+
+      debugger;
+      const formValue = this.supplierObj
     }
     
 }
